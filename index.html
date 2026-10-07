@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #764ba2;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello, World!</h1>
+    <p>A simple web page created for Agentic Programming.</p>
+    <button id="btn">Click me</button>
+    <p id="count"></p>
+  </main>
+  <script>
+    let clicks = 0;
+    document.getElementById('btn').addEventListener('click', () => {
+      clicks++;
+      document.getElementById('count').textContent = `Clicked ${clicks} time${clicks === 1 ? '' : 's'}.`;
+    });
+  </script>
+</body>
+</html>
